@@ -35,3 +35,10 @@ searchBtn.addEventListener('click', () => {
     checkWeather(searchBox.value);
 });
 
+searchBox.addEventListener('keydown', function (e) {
+    if (e.code === 'Enter') {  //check whether the pressed key is "Enter"
+        checkWeather(searchBox.value);
+    }
+});
+
+
