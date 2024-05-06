@@ -1,10 +1,13 @@
 console.log('Connected!');
 
 const apiKey ='d5f1b5feddd32a1168799f9ddb5091a7';
-const apiUrl = 'https://api.openweathermap.org/data/2.5/weather?units=metric&q=vilnius';
+const apiUrl = 'https://api.openweathermap.org/data/2.5/weather?units=metric&q=';
 
-async function checkWeather(){
-    const response = await fetch(apiUrl + `&appid=${apiKey}`);
+const searchBox = document.querySelector('.search input');
+const searchBtn = document.querySelector('.search button');
+
+async function checkWeather(city){
+    const response = await fetch(apiUrl + city + `&appid=${apiKey}`);
     let data = await response.json();
 
     console.log(data);
@@ -14,4 +17,7 @@ async function checkWeather(){
     document.querySelector('.wind').innerHTML = data.wind.speed + 'km/h';
 }
 
-checkWeather();
+searchBtn.addEventListener('click', ()=>{
+    checkWeather(searchBox.value);
+});
+
