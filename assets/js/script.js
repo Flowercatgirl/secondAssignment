@@ -2,7 +2,7 @@ console.log('Connected!');
 
 const apiKey = 'd5f1b5feddd32a1168799f9ddb5091a7';
 const apiUrl = 'https://api.openweathermap.org/data/2.5/weather?units=metric&q=';
-const weatherIcon = document.querySelector('weather-icon');
+const weatherIcon = document.querySelector('.weather-icon');
 
 const searchBox = document.querySelector('.search input');
 const searchBtn = document.querySelector('.search button');
@@ -19,15 +19,15 @@ async function checkWeather(city) {
     document.querySelector('.wind').innerHTML = data.wind.speed + ' km/h';
 
     if (data.weather[0].main == 'Clouds') {
-        weatherIcon.src = '../images/cloudy.png';
+        weatherIcon.src = 'assets/images/cloudy.png';
     } else if (data.weather[0].main == 'Clear') {
-        weatherIcon.src = '../images/day_clear.png';
+        weatherIcon.src = 'assets/images/day_clear.png';
     } else if (data.weather[0].main == 'Rain') {
-        weatherIcon.src = '../images/rain.png';
+        weatherIcon.src = 'assets/images/rain.png';
     } else if (data.weather[0].main == 'Drizzle') {
-        weatherIcon.src = '../images/day_rain.png';
+        weatherIcon.src = 'assets/images/day_rain.png';
     } else if (data.weather[0].main == 'Mist') {
-        weatherIcon.src = '../images/mist.png';
+        weatherIcon.src = 'assets/images/mist.png';
     }
 }
 
