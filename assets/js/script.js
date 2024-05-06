@@ -23,11 +23,11 @@ async function checkWeather(city) {
     } else if (data.weather[0].main == 'Clear') {
         weatherIcon.src = '../images/day_clear.png';
     } else if (data.weather[0].main == 'Rain') {
-        weatherIcon.src = '/images/rain.png';
+        weatherIcon.src = '../images/rain.png';
     } else if (data.weather[0].main == 'Drizzle') {
-        weatherIcon.src = '/images/day_rain.png';
+        weatherIcon.src = '../images/day_rain.png';
     } else if (data.weather[0].main == 'Mist') {
-        weatherIcon.src = '/images/mist.png';
+        weatherIcon.src = '../images/mist.png';
     }
 }
 
