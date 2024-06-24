@@ -53,10 +53,12 @@ function getInput() {
 
 }
 
+// add the Event Listener to the button click
 searchBtn.addEventListener('click', () => {
     getInput();
 });
 
+// add the Event Listener to the Enter key press within an input field
 searchBox.addEventListener('keydown', function (e) {
     if (e.code === 'Enter') {  //check whether the pressed key is "Enter"
         getInput();
