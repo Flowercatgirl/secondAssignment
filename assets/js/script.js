@@ -40,12 +40,17 @@ async function checkWeather(city) {
 
 }
 
-function getInput(){
-     //Remove empty spaces before passing the input value to API
-     cityName = (searchBox.value).trim();
-     checkWeather(cityName);
-     // Clear input field
-     searchBox.value = '';
+function getInput() {
+    //Remove empty spaces before passing the input value to API
+    cityName = (searchBox.value).trim();
+    /*Check if input is not empty and if it is not then pass the value to API, 
+    if it is empty do nothing */
+    if (cityName.length > 0) {
+        checkWeather(cityName);
+        // Clear input field
+        searchBox.value = '';
+    } else { }
+
 }
 
 searchBtn.addEventListener('click', () => {
