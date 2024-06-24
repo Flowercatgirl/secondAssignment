@@ -42,11 +42,15 @@ async function checkWeather(city) {
 
 searchBtn.addEventListener('click', () => {
     checkWeather(searchBox.value);
+    // Clear input field
+    searchBox.value = '';
 });
 
 searchBox.addEventListener('keydown', function (e) {
     if (e.code === 'Enter') {  //check whether the pressed key is "Enter"
         checkWeather(searchBox.value);
+        // Clear input field
+        this.value = '';
     }
 });
 
