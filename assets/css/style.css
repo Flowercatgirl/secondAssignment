@@ -6,8 +6,20 @@
 }
 
 body {
-    background: rgb(73, 183, 223);
-}
+    /* background: url(../images/earth_final.png) bottom no-repeat, rgb(73, 183, 223); */
+
+    /* color for cloudy */
+    background-color: rgb(19, 104, 134);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    -webkit-background-size: cover;
+    background-attachment: fixed;
+    overflow-x: hidden;
+    min-width: 100vw;
+    min-height: 100vh;
+    margin: 0;
+  }
 
 .heading{
     color: white;
