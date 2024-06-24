@@ -41,16 +41,18 @@ async function checkWeather(city) {
 }
 
 function getInput() {
-    //Remove empty spaces before passing the input value to API
-    cityName = (searchBox.value).trim();
+    //Remove empty spaces, numbers and special characters before passing the input value to API
+    cityName = (searchBox.value).replace(/[^a-zA-Z]/g, '');
+
     /*Check if input is not empty and if it is not then pass the value to API, 
     if it is empty do nothing */
     if (cityName.length > 0) {
         checkWeather(cityName);
         // Clear input field
-        searchBox.value = '';
+        
     } else { }
 
+    searchBox.value = '';
 }
 
 // add the Event Listener to the button click
