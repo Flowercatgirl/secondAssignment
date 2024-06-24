@@ -40,17 +40,21 @@ async function checkWeather(city) {
 
 }
 
+function getInput(){
+     //Remove empty spaces before passing the input value to API
+     cityName = (searchBox.value).trim();
+     checkWeather(cityName);
+     // Clear input field
+     searchBox.value = '';
+}
+
 searchBtn.addEventListener('click', () => {
-    checkWeather(searchBox.value);
-    // Clear input field
-    searchBox.value = '';
+    getInput();
 });
 
 searchBox.addEventListener('keydown', function (e) {
     if (e.code === 'Enter') {  //check whether the pressed key is "Enter"
-        checkWeather(searchBox.value);
-        // Clear input field
-        this.value = '';
+        getInput();
     }
 });
 
