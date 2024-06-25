@@ -47,8 +47,9 @@ async function checkWeather(city) {
 }
 
 function getInput() {
-    //Remove empty spaces, numbers and special characters using regex before passing the input value to API
-    cityName = (searchBox.value).replace(/[^a-zA-Z]/g, '');
+    /* Remove empty spaces before and after string(trim), 
+    numbers and special characters (regex) before passing the input value to API */
+    cityName = ((searchBox.value).replace(/[0-9.,*+^<>?!$#$%&{}()|[\]\\]/g, '')).trim();
 
     /*Check if input is not empty and if it is not then pass the value to API, 
     if it is empty do nothing */
