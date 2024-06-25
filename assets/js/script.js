@@ -16,6 +16,7 @@ async function checkWeather(city) {
         document.querySelector('.weather').style.display = 'none';
     } else {
         let data = await response.json();
+        let newColor = document.getElementById('body-container')
 
         document.querySelector('.city').innerHTML = data.name;
         document.querySelector('.temp').innerHTML = Math.round(data.main.temp) + '°c';
@@ -23,15 +24,20 @@ async function checkWeather(city) {
         document.querySelector('.wind').innerHTML = data.wind.speed + ' km/h';
 
         if (data.weather[0].main == 'Clouds') {
-            weatherIcon.src = 'assets/images/cloudy.png';
+            weatherIcon.src = 'assets/images/cloudy.png';    
+            newColor.style.backgroundColor = '#599CBA';
         } else if (data.weather[0].main == 'Clear') {
             weatherIcon.src = 'assets/images/day_clear.png';
+            newColor.style.backgroundColor = '#FFD364';
         } else if (data.weather[0].main == 'Rain') {
             weatherIcon.src = 'assets/images/rain.png';
+            newColor.style.backgroundColor = '#0E91CA';
         } else if (data.weather[0].main == 'Drizzle') {
             weatherIcon.src = 'assets/images/day_rain.png';
+            newColor.style.backgroundColor = '#0E91CA';
         } else if (data.weather[0].main == 'Mist') {
             weatherIcon.src = 'assets/images/mist.png';
+            newColor.style.backgroundColor = '#8AB1C8';    
         }
 
         document.querySelector('.weather').style.display = 'block';

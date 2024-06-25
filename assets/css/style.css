@@ -5,11 +5,9 @@
     box-sizing: border-box;
 }
 
-body {
-    /* background: url(../images/earth_final.png) bottom no-repeat, rgb(73, 183, 223); */
-
+#body-container {
     /* color for cloudy */
-    background-color: rgb(19, 104, 134);
+    background-color: rgb(73, 183, 223);
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
