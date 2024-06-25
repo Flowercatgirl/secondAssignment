@@ -42,15 +42,12 @@ async function checkWeather(city) {
           }
 
         const cityTime = getDate(data.dt, data.timezone);
-        const citySunrise_int = new Date((data.sys.sunrise + data.timezone) * 1000);
-        const citySunrise = citySunrise_int.toString();
-        const citySunset = new Date((data.sys.sunset + data.timezone) * 1000).toString();
 
-        let c_sunrise = citySunrise.slice(16, 24);
-        let c_sunset = citySunset.slice(16, 24);
+        const citySunrise = getDate(data.sys.sunrise, data.timezone);
+        const citySunset = getDate(data.sys.sunset, data.timezone);
 
-        console.log(c_sunrise + '   '+c_sunset);
-        console.log(cityTime);
+        console.log(`Sunrise: ${(citySunrise).slice(17, 25)}  Sunset: ${(citySunset).slice(17, 25)}`);
+        console.log(`Current Time in ${data.name}: ${(cityTime).slice(17, 25)}`);
 
         if (data.weather[0].main == 'Clouds') {
             weatherIcon.src = 'assets/images/cloudy.png';    
