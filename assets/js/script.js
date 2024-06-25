@@ -17,7 +17,7 @@ async function checkWeather(city) {
         document.querySelector('.weather').style.display = 'none';
     } else {
         let data = await response.json();
-        let newColor = document.getElementById('body-container')
+        let container = document.getElementById('body-container')
 
         document.querySelector('.city').innerHTML = data.name;
         document.querySelector('.temp').innerHTML = Math.round(data.main.temp) + '°c';
@@ -52,21 +52,52 @@ async function checkWeather(city) {
         console.log(`Current Time in ${data.name}: ${(cityTime).toUTCString().slice(17, 25)}`);
         console.log(`Is Daytime: ${isDaytime}`);
 
-        if (data.weather[0].main == 'Clouds') {
-            weatherIcon.src = 'assets/images/cloudy.png';    
-            newColor.style.backgroundColor = '#599CBA';
-        } else if (data.weather[0].main == 'Clear') {
-            weatherIcon.src = 'assets/images/day_clear.png';
-            newColor.style.backgroundColor = '#FFD364';
-        } else if (data.weather[0].main == 'Rain') {
-            weatherIcon.src = 'assets/images/rain.png';
-            newColor.style.backgroundColor = '#0E91CA';
-        } else if (data.weather[0].main == 'Drizzle') {
-            weatherIcon.src = 'assets/images/day_rain.png';
-            newColor.style.backgroundColor = '#0E91CA';
-        } else if (data.weather[0].main == 'Mist') {
-            weatherIcon.src = 'assets/images/mist.png';
-            newColor.style.backgroundColor = '#8AB1C8';    
+        if (isDaytime) {
+            switch (data.weather[0].main) {
+                case 'Clouds':
+                    weatherIcon.src = 'assets/images/cloudy.png';
+                    container.style.backgroundColor = '#599CBA';
+                    break;
+                case 'Clear':
+                    weatherIcon.src = 'assets/images/day_clear.png';
+                    container.style.backgroundColor = '#FFD364';
+                    break;
+                case 'Rain':
+                    weatherIcon.src = 'assets/images/rain.png';
+                    container.style.backgroundColor = '#2C3E50';
+                    break;
+                case 'Drizzle':
+                    weatherIcon.src = 'assets/images/day_rain.png';
+                    container.style.backgroundColor = '#0E91CA';
+                    break;
+                case 'Mist':
+                    weatherIcon.src = 'assets/images/mist.png';
+                    container.style.backgroundColor = '#8AB1C8';
+                    break;
+            }
+        } else {
+            switch (data.weather[0].main) {
+                case 'Clouds':
+                    weatherIcon.src = 'assets/images/night_cloudy.png';
+                    container.style.backgroundColor = '#2C3E50';
+                    break;
+                case 'Clear':
+                    weatherIcon.src = 'assets/images/night_clear.png';
+                    container.style.backgroundColor = '#2C3E50';
+                    break;
+                case 'Rain':
+                    weatherIcon.src = 'assets/images/night_rain.png';
+                    container.style.backgroundColor = '#2C3E50';
+                    break;
+                case 'Drizzle':
+                    weatherIcon.src = 'assets/images/night_drizzle.png';
+                    container.style.backgroundColor = '#2C3E50';
+                    break;
+                case 'Mist':
+                    weatherIcon.src = 'assets/images/night_mist.png';
+                    container.style.backgroundColor = '#34495E';
+                    break;
+            }
         }
 
         document.querySelector('.weather').style.display = 'block';
