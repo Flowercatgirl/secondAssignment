@@ -6,6 +6,7 @@ const weatherIcon = document.querySelector('.weather-icon');
 
 const searchBox = document.querySelector('.search input');
 const searchBtn = document.querySelector('.search button');
+const mainPicture = document.getElementById('main_pic');
 
 async function checkWeather(city) {
 
@@ -55,10 +56,16 @@ function getInput() {
     if it is empty do nothing */
     if (cityName.length > 0) {
         checkWeather(cityName);
-        // Clear input field
+        
         
     } else { }
 
+    //Remove the initial picture
+    if (mainPicture){
+        mainPicture.remove();
+    }else{}
+
+    // Clear input field
     searchBox.value = '';
 }
 

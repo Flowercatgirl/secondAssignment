@@ -1,7 +1,7 @@
-*{
+* {
     margin: 0;
     padding: 0;
-    font-family: 'Poppins',sans-serif;
+    font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
 
@@ -17,9 +17,9 @@
     min-width: 100vw;
     min-height: 100vh;
     margin: 0;
-  }
+}
 
-.heading{
+.heading {
     color: white;
     margin: 20px auto 0;
     padding: 40px 35px;
@@ -28,7 +28,7 @@
     font-weight: 500;
 }
 
-.card{
+.card {
     width: 90%;
     max-width: 470px;
     background: linear-gradient(135deg, #7ee5ff, #105a7f);
@@ -39,14 +39,14 @@
     text-align: center;
 }
 
-.search{
-    width:100%;
-    display:flex;
+.search {
+    width: 100%;
+    display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.search input{
+.search input {
     border: 0;
     outline: 0;
     background: #ebfffc;
@@ -59,7 +59,7 @@
     font-size: 18px;
 }
 
-.search button{
+.search button {
     border: 0;
     outline: 0;
     background: #ebfffc;
@@ -69,27 +69,27 @@
     cursor: pointer;
 }
 
-.search button img{
+.search button img {
     width: 16px;
 }
 
-.weather-icon{
+.weather-icon {
     width: 170px;
     margin-top: 30px;
 }
 
-.weather h1{
+.weather h1 {
     font-size: 80px;
     font-weight: 500;
 }
 
-.weather h2{
+.weather h2 {
     font-size: 45px;
     font-weight: 400;
     margin-top: -10px;
 }
 
-.details{
+.details {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -97,23 +97,24 @@
     margin-top: 50px;
 }
 
-.col{
+.col {
     display: flex;
     align-items: center;
     text-align: left;
 }
 
-.col img{
+.col img {
     width: 50px;
     margin-right: 10px;
 }
 
-.humidity, .wind{
+.humidity,
+.wind {
     font-size: 28px;
     margin-top: -6px;
 }
 
-.weather{
+.weather {
     display: none;
 }
 
@@ -123,6 +124,12 @@
     font-size: 14px;
     margin-top: 10px;
     display: none;
+}
+
+#main_pic {
+    display: flex;
+    justify-content: center;
+
 }
 
 /*Footer css styling including social media links*/
@@ -137,20 +144,21 @@ footer {
     opacity: 0.9;
     min-width: 100%;
     height: 36px;
-  }
-  
-  footer p {
+}
+
+footer p {
     margin: 0;
-  }
-  .fa-brands {
+}
+
+.fa-brands {
     padding: 4px;
     display: flex;
     justify-content: center;
     font-size: 24px;
     align-items: center;
     color: #086595;
-  }
-  
-  .fa-brands:hover {
+}
+
+.fa-brands:hover {
     color: #49b6e9;
-  }
+}
