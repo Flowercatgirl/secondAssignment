@@ -37,7 +37,7 @@ async function checkWeather(city) {
             new Date(utc_milliseconds).toUTCString() changes the timezone accordingly. */
             const utc_seconds = parseInt(dt, 10) + parseInt(timezone, 10);
             const utc_milliseconds = utc_seconds * 1000;
-            const local_date = new Date(utc_milliseconds).toUTCString();
+            const local_date = new Date(utc_milliseconds);
             return local_date;
           }
 
@@ -46,8 +46,11 @@ async function checkWeather(city) {
         const citySunrise = getDate(data.sys.sunrise, data.timezone);
         const citySunset = getDate(data.sys.sunset, data.timezone);
 
-        console.log(`Sunrise: ${(citySunrise).slice(17, 25)}  Sunset: ${(citySunset).slice(17, 25)}`);
-        console.log(`Current Time in ${data.name}: ${(cityTime).slice(17, 25)}`);
+        const isDaytime = cityTime > citySunrise && cityTime < citySunset;
+
+        console.log(`Sunrise: ${(citySunrise).toUTCString().slice(17, 25)}  Sunset: ${(citySunset).toUTCString().slice(17, 25)}`);
+        console.log(`Current Time in ${data.name}: ${(cityTime).toUTCString().slice(17, 25)}`);
+        console.log(`Is Daytime: ${isDaytime}`);
 
         if (data.weather[0].main == 'Clouds') {
             weatherIcon.src = 'assets/images/cloudy.png';    
