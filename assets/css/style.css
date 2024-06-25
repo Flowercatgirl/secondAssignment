@@ -124,3 +124,33 @@
     margin-top: 10px;
     display: none;
 }
+
+/*Footer css styling including social media links*/
+
+footer {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    bottom: 0;
+    z-index: 6;
+    background-color: white;
+    opacity: 0.9;
+    min-width: 100%;
+    height: 36px;
+  }
+  
+  footer p {
+    margin: 0;
+  }
+  .fa-brands {
+    padding: 4px;
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+    align-items: center;
+    color: #086595;
+  }
+  
+  .fa-brands:hover {
+    color: #49b6e9;
+  }
