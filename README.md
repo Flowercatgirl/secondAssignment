@@ -59,7 +59,6 @@ Find the live site [here]
 - Google Chrome extensions:
    Responsive Image Linter - To optimise image sizing.
    Better ruler - To check the size of a whitespace in the gallery in order to fill it.
-   Lighthouse Report Viewer - to check the performance of the site.
 
 ---
 
@@ -106,5 +105,47 @@ To clone the repository:
 - Open the terminal in your code editor and change the current working directory to the location you want to use for the cloned directory
 
 - Type 'git clone' into the terminal and then paste the link you copied. Press enter
+
+___
+
+## Testing
+
+Testing was ongoing throughout the entire build of the website. I used mostly Chrome Developer Tools, but also Lighthouse report viewer at the end.
+
+### W3C Validator
+
+[CSS validation](assets/images/css_validation.jpg)
+
+[HTML validation](assets/images/html_validation.jpg)
+
+### JsHint
+
+Please note: warnings for play.js were not relevant as ES6 is available. 
+
+[JS validation](assets/images/js_validation.jpg)
+
+### Solved Bugs
+
+1. The error thrown:
+Uncaught (in promise)
+Error: A listener indicated an asynchronous response by returning true, but the message channel closed before a response was received - this error was solved by disabling Google Chrome Extension.
+
+2. Special characters input was generating errors - I fixed it with regex implementation.
+
+3. It was really hard to implement the daytime recognition, I was getting a lot of errors trying different code.
+
+### Known Bugs
+
+The only place that fetches the wrong info is Dublin.
+
+### Full Testing
+
+To fully test my website I performed the following testing using a number of browsers (Chrome, Safari, Mozilla Firefox, Duckduckgo) and devices ( Macbook Pro 16", iPhone 14 plus).
+
+I also viewed both pages in Chrome developer tools to ensure they were responsive on all screen sizes.
+
+#### Links
+
+-  Test each link on each page. Each link worked as expected, and any links leading to external pages opened correctly in a seperate browser tab.
 
 ___

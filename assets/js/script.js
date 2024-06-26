@@ -21,7 +21,7 @@ async function checkWeather(city) {
         errorPicture.style.justifyContent = 'center';
     } else {
         let data = await response.json();
-        let container = document.getElementById('body-container')
+        let container = document.getElementById('body-container');
 
         document.querySelector('.city').innerHTML = data.name;
         document.querySelector('.temp').innerHTML = Math.round(data.main.temp) + '°c';
