@@ -121,7 +121,9 @@ function getInput() {
         checkWeather(cityName);
         
         
-    } else { }
+    } else { 
+        mainPicture.style.display = 'flex';
+    }
 
 
     if (window.getComputedStyle(mainPicture).display != 'none'){
