@@ -120,20 +120,18 @@ function getInput() {
     if (cityName.length > 0) {
         checkWeather(cityName);
         
+        if (window.getComputedStyle(mainPicture).display != 'none'){
+            //hide mainPicture on submitting user input
+            mainPicture.style.display = 'none';
+            
+        }else if(window.getComputedStyle(errorPicture).display != 'none'){
+            //hide errorPicture on submitting a valid city input
+            errorPicture.style.display = 'none';
+        }else{}
         
     } else { 
         mainPicture.style.display = 'flex';
     }
-
-
-    if (window.getComputedStyle(mainPicture).display != 'none'){
-        //hide mainPicture on submitting user input
-        mainPicture.style.display = 'none';
-        
-    }else if(window.getComputedStyle(errorPicture).display != 'none'){
-        //hide errorPicture on submitting a valid city input
-        errorPicture.style.display = 'none';
-    }else{}
 
     // Clear input field
     searchBox.value = '';
