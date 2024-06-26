@@ -25,3 +25,5 @@ Find the live site [here]
 - Displays 404 icon when there's no such place found
 
 - Discards special characters, that were entered by a mistake, also any white spaces before and after user input
+
+- Have Social Icons within a footer
