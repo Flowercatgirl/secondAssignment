@@ -6,4 +6,4 @@ Find the live site [here]
 
 [here]: https://flowercatgirl.github.io/secondAssignment/
 
-![screenshot of site responsiveness](assets/images/responsiveness.webp)
+![screenshot of site responsiveness](assets/images/responsiveness.jpg)
