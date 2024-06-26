@@ -78,24 +78,24 @@ async function checkWeather(city) {
         } else {
             switch (data.weather[0].main) {
                 case 'Clouds':
-                    weatherIcon.src = 'assets/images/night_cloudy.png';
+                    weatherIcon.src = 'assets/images/night_half_moon_partial_cloud.png';
                     container.style.backgroundColor = '#2C3E50';
                     break;
                 case 'Clear':
-                    weatherIcon.src = 'assets/images/night_clear.png';
+                    weatherIcon.src = 'assets/images/night_half_moon_clear.png';
                     container.style.backgroundColor = '#2C3E50';
                     break;
                 case 'Rain':
-                    weatherIcon.src = 'assets/images/night_rain.png';
+                    weatherIcon.src = 'assets/images/rain.png';
                     container.style.backgroundColor = '#2C3E50';
                     break;
                 case 'Drizzle':
-                    weatherIcon.src = 'assets/images/night_drizzle.png';
+                    weatherIcon.src = 'assets/images/night_half_moon_rain.png';
                     container.style.backgroundColor = '#2C3E50';
                     break;
                 case 'Mist':
-                    weatherIcon.src = 'assets/images/night_mist.png';
-                    container.style.backgroundColor = '#34495E';
+                    weatherIcon.src = 'assets/images/mist.png';
+                    container.style.backgroundColor = '#2C3E50';
                     break;
             }
         }
