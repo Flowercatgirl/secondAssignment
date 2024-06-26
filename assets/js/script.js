@@ -7,6 +7,7 @@ const weatherIcon = document.querySelector('.weather-icon');
 const searchBox = document.querySelector('.search input');
 const searchBtn = document.querySelector('.search button');
 const mainPicture = document.getElementById('main_pic');
+const errorPicture = document.getElementById('error_page');
 
 async function checkWeather(city) {
 
@@ -15,6 +16,9 @@ async function checkWeather(city) {
     if (response.status == 404) {
         document.querySelector('.error').style.display = 'block';
         document.querySelector('.weather').style.display = 'none';
+        mainPicture.style.display = 'none';
+        errorPicture.style.display = 'flex';
+        errorPicture.style.justifyContent = 'center';
     } else {
         let data = await response.json();
         let container = document.getElementById('body-container')
@@ -119,9 +123,14 @@ function getInput() {
         
     } else { }
 
-    //Remove the initial picture
-    if (mainPicture){
-        mainPicture.remove();
+
+    if (window.getComputedStyle(mainPicture).display != 'none'){
+        //hide mainPicture on submitting user input
+        mainPicture.style.display = 'none';
+        
+    }else if(window.getComputedStyle(errorPicture).display != 'none'){
+        //hide errorPicture on submitting a valid city input
+        errorPicture.style.display = 'none';
     }else{}
 
     // Clear input field

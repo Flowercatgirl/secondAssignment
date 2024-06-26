@@ -132,6 +132,10 @@
 
 }
 
+#error_page {
+    display:none;
+}
+
 /*Footer css styling including social media links*/
 
 footer {
