@@ -127,13 +127,10 @@ function getInput() {
         }else if(window.getComputedStyle(errorPicture).display != 'none'){
             //hide errorPicture on submitting a valid city input
             errorPicture.style.display = 'none';
-            document.querySelector('.error').style.display = 'none';
 
         }else{}
         
-    } else { 
-        mainPicture.style.display = 'flex';
-    }
+    } else {}
 
     // Clear input field
     searchBox.value = '';
