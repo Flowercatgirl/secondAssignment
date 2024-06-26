@@ -149,3 +149,35 @@ I also viewed both pages in Chrome developer tools to ensure they were responsiv
 -  Test each link on each page. Each link worked as expected, and any links leading to external pages opened correctly in a seperate browser tab.
 
 ___
+
+## Credits 
+
+### Code used
+
+Burger menu, gallery and footer code used was taken from Love Running Project.
+
+Solution how to fix the outdated frameborder was taken from [Stackoverflow](https://stackoverflow.com/questions/26274082/the-frameborder-attribute-on-the-iframe-element-is-obsolete-use-css-instead)
+
+## Content 
+
+Text content taken from 
+
+[Culture Trip](https://theculturetrip.com/europe/lithuania/articles/gediminas-dream-the-legend-of-vilnius)
+
+and
+
+[Parsifal](https://parsifal.pixel-online.org/legend_view.php?id_legend=MTA=&ref=lithuania)
+
+Both sites were used only for learning purposes
+
+## Media
+
+Images were taken from multiple sites:
+
+[hiclipart.com](https://www.hiclipart.com/free-transparent-background-png-clipart-hvpxr),
+
+[pngwing.com](https://www.pngwing.com/en/free-png-hcbfz/download)
+
+[dovora.com](https://www.dovora.com/resources/weather-icons/)
+
+All the Media taken only for learning purposes, some of the icons were created by me in Photoshop
